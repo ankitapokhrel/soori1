@@ -41,3 +41,4 @@ class UserlogInView(APIView):
             else:
                 return Response({'non_field_errors':['Email or Password is not valid']}, status=status.HTTP_400_BAD_REQUEST)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
