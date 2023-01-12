@@ -38,12 +38,20 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'rest_framework',
-    'rest_framework_simplejwt',
+    'rest_framework_simplejwt','drf_spectacular',
 
     'phonenumber_field',
 
-    'src.user'
+    'src.user',
+    'src.solution',
+    'src.blog',
+    'src.contact',
+    'src.aboutus',
+    'src.gallery',
+    'src.brandname',
+    'src.technology',
 ]
 
 MIDDLEWARE = [
@@ -91,6 +99,12 @@ REST_FRAMEWORK = {
     # "DEFAULT_PERMISSION_CLASSES": [
     #     "rest_framework.permissions.IsAuthenticated",
     # ],
+}
+
+# for swagger implementation
+REST_FRAMEWORK = {
+    # YOUR SETTINGS
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
 
 # Database
